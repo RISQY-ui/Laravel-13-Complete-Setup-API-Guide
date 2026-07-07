@@ -5,7 +5,7 @@ Technical Documentation | Platform: Linux | Date: July 2026
 ---
 
 📋 Table of Contents
-
+ ```
 · 0. Environment Preparation (From Zero)
 · 1. Installing Laravel 13
 · 2. Database Configuration (SQLite)
@@ -19,7 +19,7 @@ Technical Documentation | Platform: Linux | Date: July 2026
 · 10. Common Errors & Solutions
 · 11. Quick Command Summary
 · 12. Postman Collection
-
+```
 ---
 
 0. Environment Preparation (From Zero)
@@ -41,7 +41,7 @@ php --version
 ```
 
 Required Extensions for Laravel:
-
+```
 Extension Function
 php8.2-mysql MySQL connection
 php8.2-sqlite3 SQLite connection
@@ -51,7 +51,7 @@ php8.2-curl HTTP requests (API)
 php8.2-zip Zip file extraction
 php8.2-gd Image manipulation
 php8.2-bcmath High precision calculations
-
+```
 ---
 
 0.2 Install Composer (Global)
@@ -417,14 +417,14 @@ Route::apiResource('products', ProductController::class);
 ```
 
 Generated Routes:
-
+```
 Method URL Controller Method
 GET /api/products index()
 POST /api/products store()
 GET /api/products/{id} show()
 PUT/PATCH /api/products/{id} update()
 DELETE /api/products/{id} destroy()
-
+```
 ---
 
 7. CORS Configuration
@@ -555,7 +555,7 @@ App\Models\Product::all();
 ---
 
 10. Common Errors & Solutions
-
+```
 Error Cause Solution
 SQLSTATE[HY000] [14] unable to open database file SQLite permission issue sudo chmod 777 database/database.sqlite
 Class "Product" not found Wrong namespace Add use App\Models\Product;
@@ -564,11 +564,11 @@ Call to undefined method Missing method in controller Check method name matches 
 500 Internal Server Error Code syntax error Check logs: storage/logs/laravel.log
 CORS header missing CORS not configured Edit config/cors.php
 Validation failed Invalid input data Check validation rules and data format
-
+```
 ---
 
 11. Quick Command Summary
-
+```
 Command Description
 composer create-project laravel/laravel project-name Create new Laravel project
 php artisan serve Start development server
@@ -584,7 +584,7 @@ php artisan route:list List all routes
 php artisan optimize:clear Clear all cache
 touch database/database.sqlite Create SQLite database
 curl -X GET http://127.0.0.1:8000/api/products Test API endpoint
-
+```
 ---
 
 12. Postman Collection
@@ -696,7 +696,7 @@ Create file Laravel-13-API.postman_collection.json:
 ---
 
 ✅ FINAL STATUS SUMMARY
-
+```
 Component Status
 PHP 8.2 + Extensions ✅ Installed
 Composer ✅ Installed
@@ -704,7 +704,7 @@ Laravel 13 Project ✅ Created
 SQLite Database ✅ Configured
 Product Model ✅ Created
 Product Migration ✅ Migrated
-Product Controller ✅ Created (with validation & error handling)
+Product Controller ✅ Created
 Product Resource ✅ Created
 API Routes ✅ Configured
 CORS ✅ Configured
@@ -712,7 +712,7 @@ Seeder ✅ Created & Run
 API Testing ✅ Working
 Postman Collection ✅ Ready
 Documentation ✅ Complete
-
+```
 ---
 
 📂 REPO STRUCTURE
@@ -786,3 +786,5 @@ php artisan db:seed
 
 # Start server
 php artisan serve
+```
+---
